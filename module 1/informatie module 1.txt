@@ -1,5 +1,5 @@
 1.Je kunt Python-code schrijven d.m.v. :
-	statements
+	statements 
 	values
 	expressions
 	operators
