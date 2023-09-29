@@ -1,5 +1,5 @@
 #prijs van vip en dag ticket
-PRIJS_VIP_PER_PERIODE = 0.37 #per 5 min of per VIP_PRIJS_PERIODE
+PRIJS_VIP_PER_PERIODE = 0.37 #per VIP_PRIJS_PERIODE
 VIP_PRIJS_PERIODE = 5
 vip_prijs_per_minuut = PRIJS_VIP_PER_PERIODE / VIP_PRIJS_PERIODE
 dag_ticket_pp = 7.45
