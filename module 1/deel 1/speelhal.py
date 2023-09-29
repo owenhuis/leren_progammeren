@@ -1,3 +1,6 @@
+PRIJS_PER_5MIN_VIP = 0.37 #per 5 min of per VIP_PRIJS_PERIODE
+VIP_PRIJS_PERIODE = 5
+vip_prijs_per_minuut = PRIJS_PER_5MIN_VIP / VIP_PRIJS_PERIODE
 dag_ticket_pp = 7.45
 
 
@@ -8,11 +11,7 @@ prijs_ticket = dag_ticket_pp * hoeveel_ticket
 vip = input('wil je naar de vip? (ja/nee)  ')
 aantal_vip = int(input('hoeveel mensen gaan in de vip?  '))
 hoelang_vip = int(input('hoelang wil je gebruik maken van de vip ruimte? (in minuten)   '))
-tijd_in_de_vip = 0.37 * hoelang_vip * aantal_vip
+prijs_voor_de_vip = vip_prijs_per_minuut * hoelang_vip * aantal_vip
+totale_prijs = dag_ticket_pp + prijs_voor_de_vip
 
-if hoeveel_ticket == 4 and hoelang_vip == 45 and vip == 'ja' :
-    print('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar 44.44 euro')
-elif vip == 'ja':
-    print(f'uw totaal bedrag = {dag_ticket_pp * hoeveel_ticket + tijd_in_de_vip * aantal_vip}')
-elif vip == 'nee':
-    print(f'uw totaal bedrag = {prijs_ticket} ')
+print(f'Dit geweldige dagje-uit met {hoeveel_ticket} mensen in de Speelhal met {hoelang_vip} minuten VR kost je maar {totale_prijs} euro')
