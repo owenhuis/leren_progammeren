@@ -9,3 +9,5 @@ elif a <= b:
     minwaarde = a
     print(f'{a} is het kleinste getal!')
     print(f'de min waarde = {minwaarde}')
+else:
+    print(f'{a} = gelijk aan {b}!')
