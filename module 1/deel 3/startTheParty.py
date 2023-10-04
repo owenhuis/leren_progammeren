@@ -1,17 +1,17 @@
+#naam gastheer
+gastheer_naam = input('wat is de naam van de gastheer?')
+
+#wardes true or false
 gastheer = True
 gasten = True
 drank = True
 chips = True
 
-if chips and drank and gasten and gastheer:
+if gastheer_naam == 'owen':
+    print('start the party')
+elif gastheer_naam == 'slemmer':
+    print('no party')
+elif (not chips and not drank) or (gasten or gastheer):
     print('Start the Party')
-elif not gastheer:
+else:
     print('No Party')
-elif not drank:
-    print("party can't start")
-elif not (gasten or gastheer):
-    print("party can't start")
-elif gastheer and drank and not chips:
-    print('start the party')
-elif gastheer or (gasten and drank and chips):
-    print('start the party')
