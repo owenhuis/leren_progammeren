@@ -10,6 +10,17 @@ certificaat_overleven = input('heb je een certificaat voor het overleven met gev
 dieren_of_kleding_ervaring = input('heb je meer dan 4 jaar praktijk evervaring met dieren of dressur? (ja/nee)  ')
 jongleer_ervaring = input('heb je 5 of meer jaren ervaring met jongleren? (ja/nee)  ')
 acrobatiek_ervaring = input('heb je 3 jaar of langer praktijk ervaring met acrobatiek? (ja/nee)  ')
+diploma = ('bezit je een diploma van mbo niveau 4? (ja/nee)  ')
+ondernemer = ('ben je ondernemer (ja/nee)')
+if ondernemer == 'ja':
+    ondernemer_tijd = int(input('voor hoelang ben je al een ondernemer?  '))
+    if ondernemer_tijd == 3:
+        ondernemer_werknemers = int(input('hoeveel werknemers zijn er onder je?  '))
+        if ondernemer_werknemers >= 5:
+            ondernemer == True
+        else:
+            ondernemer == False
+
 # min en max gewicht
 MIN_GEWICHT = 90
 MAX_GEWICHT = 120
