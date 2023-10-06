@@ -16,7 +16,7 @@ MAX_GEWICHT = 120
 #min en max lengte
 MIN_LENGTE = 150
 MAX_LENGTE = 220
-
+#eind resultaat
 if (gewicht >= MIN_GEWICHT and gewicht <= MAX_GEWICHT) and (lengte >= MIN_LENGTE and lengte <= MAX_LENGTE) and rijbewijs == 'ja' and hoed == 'ja' and certificaat_overleven == 'ja' and (dieren_of_kleding_ervaring == 'ja' or jongleer_ervaring == 'ja' or acrobatiek_ervaring == 'ja'):
     print('je bent geschickt om deze circusleider te worden stuur je cv zo snel mogelijk en dan zien we je over 2 weken om 15:00')
 else:
