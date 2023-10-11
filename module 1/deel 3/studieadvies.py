@@ -1,3 +1,4 @@
+#gekregen
 STUDIEDOKTER_TITEL = '''
 *********************** STUDIEADVIES ***********************
 Ik ga jou helpen met jouw opleiding. Jij krijgt een aantal stellingen te zien.
@@ -30,14 +31,30 @@ COMPETENTIE_ADVIES_GERUSTSTELLEND = '''
 Het lijkt erop dat je voldoende zelfvertrouwen, voldoening en plezier ervaart in
 het leren programmeren. Mocht het een keer minder gaan, maak je geen zorgen. Have fun!
 '''
+#zelf gemaakt
+#eindprint start
 print(STUDIEDOKTER_TITEL)
 print(OPTIES)
 print()
-int(input(AANTAL_WEKEN_VRAAG))
-int(input(COMPETENTIE_STELLING_1))
-int(input(COMPETENTIE_STELLING_2))
-int(input(COMPETENTIE_STELLING_3))
-int(input(COMPETENTIE_STELLING_4))
-int(input(COMPETENTIE_STELLING_5))
-int(input(COMPETENTIE_STELLING_6))
-int(input(COMPETENTIE_STELLING_7))
+#store point
+aantal_weken_vraag = int(input(AANTAL_WEKEN_VRAAG))
+competentie_1 = int(input(COMPETENTIE_STELLING_1))
+competentie_2 = int(input(COMPETENTIE_STELLING_2))
+competentie_3 = int(input(COMPETENTIE_STELLING_3))
+competentie_4 = int(input(COMPETENTIE_STELLING_4))
+competentie_5 = int(input(COMPETENTIE_STELLING_5))
+#weken
+if aantal_weken_vraag >= 10:
+    competentie_6 = int(input(COMPETENTIE_STELLING_6))
+    competentie_7 = int(input(COMPETENTIE_STELLING_7))
+else:
+    competentie_6 = competentie_7 = 0
+#advies
+print(COMPETENTIE_ADVIES_TITEL)
+totaal_score = (competentie_1 + competentie_2 + competentie_3 + competentie_4 + competentie_5 + competentie_6 + competentie_7) / 7 
+if totaal_score <= 2:
+    print(COMPETENTIE_ADVIES_ZORGELIJK)
+if totaal_score <= 3:
+    print(COMPETENTIE_ADVIES_TWIJFELACHTIG)
+else:
+    print(COMPETENTIE_ADVIES_GERUSTSTELLEND)
