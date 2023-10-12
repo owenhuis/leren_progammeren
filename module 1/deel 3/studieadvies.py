@@ -31,6 +31,7 @@ COMPETENTIE_ADVIES_GERUSTSTELLEND = '''
 Het lijkt erop dat je voldoende zelfvertrouwen, voldoening en plezier ervaart in
 het leren programmeren. Mocht het een keer minder gaan, maak je geen zorgen. Have fun!
 '''
+
 #zelf gemaakt
 #eindprint start
 print(STUDIEDOKTER_TITEL)
