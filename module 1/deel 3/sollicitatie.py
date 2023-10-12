@@ -90,4 +90,4 @@ if geslacht == 'anders':
 #eind resultaat
 if not afwijs_lijst:
     print('je bent geschickt om deze circusleider te worden, stuur je cv zo snel mogelijk en wij contact met je op.')
-
+ 

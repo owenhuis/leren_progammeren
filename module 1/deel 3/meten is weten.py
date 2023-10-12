@@ -1,8 +1,7 @@
 #waardes invoeren
 a = int(input('welk heel getal wil je hebben?  '))
 b = int(input('welk tweede hele getal wil je?  '))
-
-    #a groter dan b
+#a groter dan b
 if a > b:
     maxwaarde = a
     print(f'{a} = het groostste getal!')
