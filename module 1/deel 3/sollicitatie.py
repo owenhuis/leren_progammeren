@@ -52,42 +52,54 @@ SNOR_LENGTE = 10 #cm
 GLIMLACH = 10 #cm
 
 #afwijslijst
-afwijs_lijst = []
-
+afwijzen = False
 if rijbewijs == 'nee': 
     print('sorry we zoeken alleen een directeur die ook kan rijden')
+    afwijzen = True
 if hoed == 'nee':
     print('een goede circus directeur heeft een hoge hoed nodig')
+    afwijzen = True
 if gewicht < MIN_GEWICHT:
     print('sorry maar we zoeken iemand die wat zwaarder is')
+    afwijzen = True
 if gewicht > MAX_GEWICHT:
     print('sorry maar we zoeken iemand die wat lichter is')
+    afwijzen = True
 if lengte < MIN_LENGTE:
     print('sorry maar we zoeken iemand wat langer')
+    afwijzen = True
 if lengte > MAX_LENGTE:
     print('we zoeken iemand die wat kleiner is')
+    afwijzen = True
 if certificaat_overleven == 'nee':
     print('we zoeken iemand die met gevaarlijk persooneel omkan.')
+    afwijzen = True
 if drie_keuzes == False:
     print('je moet of dieren, kleding, jongleer of acrobatiek ervaring hebben')
+    afwijzen = True
 if diploma_ondernemer == False:
     print('je moet of een diploma hebben of een ondernemer zijn')
+    afwijzen = True
 if geslacht == 'man':
     if snor < SNOR_LENGTE:
         print('we zoeken iemand met een bredere snor')
+        afwijzen = True
 if geslacht == 'vrouw':
     if haar_lengte < HAAR_LENGTE:
         print('we zoeken iemand met wat langer haar')
+        afwijzen = True
     if haarkleur != 'rood':
         print('we zoeken iemand met een andere haarkleur')
+        afwijzen = True
         if krulhaar == 'nee':
             print('we zoeken iemand met krulhaar')
+            afwijzen = True
 if geslacht == 'anders':
     if glimlach < GLIMLACH:
         print('we zoeken iemand met een grotere lach')
-
+        afwijzen = True
 
 #eind resultaat
-if not afwijs_lijst:
+if afwijzen == False:
     print('je bent geschickt om deze circusleider te worden, stuur je cv zo snel mogelijk en wij contact met je op.')
  
