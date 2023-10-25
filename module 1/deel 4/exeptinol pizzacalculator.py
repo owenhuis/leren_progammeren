@@ -1,31 +1,30 @@
-#prijzen van de pizza
-small_pizza_prijs  = 10.99 
-medium_pizza_prijs = 13.99 
-large_pizza_prijs  = 16.99 
+# Prijzen van de pizza
+small_pizza_prijs = 10.99
+medium_pizza_prijs = 13.99
+large_pizza_prijs = 16.99
 
-#hoeveelheid pizza's
+# Hoeveelheid pizza's
 try:
-    pizza_small =  int(input("hoeveel small pizza's wil je ?  "))
-    pizza_medium = int(input("hoeveel medium pizza's wil je?  "))
-    pizza_large =  int(input("hoeveel large pizza's wil je?   "))
+    pizza_small_count = int(input("Hoeveel small pizza's wil je? "))
+    pizza_medium_count = int(input("Hoeveel medium pizza's wil je? "))
+    pizza_large_count = int(input("Hoeveel large pizza's wil je? "))
+    
+    # Bereken de prijs individueel
+    pizza_small_price = small_pizza_prijs * pizza_small_count
+    pizza_medium_price = medium_pizza_prijs * pizza_medium_count
+    pizza_large_price = large_pizza_prijs * pizza_large_count
 
-#pizza's prijs individueel
-pizza_1 =  small_pizza_prijs * pizza_small
-pizza_2 = medium_pizza_prijs * pizza_medium
-pizza_3 =  large_pizza_prijs * pizza_large
+    # Eindprijs
+    totaal_bedrag = pizza_small_price + pizza_medium_price + pizza_large_price
 
-#eindpreis
-totaal_bedrag = pizza_1 + pizza_2 + pizza_3
-
-#bonnetje
-print()
-print()
-print("-----------------------------")
-print(f" Aantal small pizza's: {pizza_small}   ")
-print(f" Aantal medium pizza's: {pizza_medium}  ")
-print(f" Aantal large pizza's: {pizza_large}   ")
-print("-----------------------------")
-print(f" Totaalbedrag: {totaal_bedrag:.2f} euro  ")
-print("-----------------------------")
-print()
-print()
+    # Bonnetje
+    print("\n-----------------------------")
+    print(f"Aantal small pizza's: {pizza_small_count}")
+    print(f"Aantal medium pizza's: {pizza_medium_count}")
+    print(f"Aantal large pizza's: {pizza_large_count}")
+    print("-----------------------------")
+    print(f"Totale prijs: {totaal_bedrag:.2f} euro")
+    print("-----------------------------")
+    print()
+except ValueError:
+    print('Voer een geldig getal in')
