@@ -4,9 +4,10 @@ medium_pizza_prijs = 13.99
 large_pizza_prijs  = 16.99 
 
 #hoeveelheid pizza's
-pizza_small =  int(input("hoeveel small pizza's wil je ?  "))
-pizza_medium = int(input("hoeveel medium pizza's wil je?  "))
-pizza_large =  int(input("hoeveel large pizza's wil je?   "))
+try:
+    pizza_small =  int(input("hoeveel small pizza's wil je ?  "))
+    pizza_medium = int(input("hoeveel medium pizza's wil je?  "))
+    pizza_large =  int(input("hoeveel large pizza's wil je?   "))
 
 #pizza's prijs individueel
 pizza_1 =  small_pizza_prijs * pizza_small
