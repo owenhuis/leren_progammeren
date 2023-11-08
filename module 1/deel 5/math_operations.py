@@ -1,5 +1,5 @@
 # example:
- 
+import math 
 
 def increment(nr: float) -> float:
   return nr + 1
@@ -19,11 +19,15 @@ def multiply(nr1: float,nr2: float) -> float:
 def divide(nr1: float,nr2:float) -> float:
   return nr1 / nr2
 
-def even(a: int, b: int) -> str:
-  return a == b
+def even(nr1: int, nr2: int) -> str:
+  return nr1 == nr2
 
-def een_groter(a: int,b: int) -> str:
-  return a > b
+def een_groter(nr1: int,nr2: int) -> str:
+  return nr1 > nr2
 
-def twee_groter(a: int,b: int) -> str:
-  return a < b
+def twee_groter(nr1: int,nr2: int) -> str:
+  return nr1 < nr2
+
+def calculate_cilinder_content (diameter: float, hoogte: float) -> float:
+  return (diameter / 2) * (diameter / 2) * math.pi * hoogte
+
