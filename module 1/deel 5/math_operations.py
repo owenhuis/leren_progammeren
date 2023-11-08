@@ -19,3 +19,11 @@ def multiply(nr1: float,nr2: float) -> float:
 def divide(nr1: float,nr2:float) -> float:
   return nr1 / nr2
 
+def even(a: int, b: int) -> str:
+  return a == b
+
+def een_groter(a: int,b: int) -> str:
+  return a > b
+
+def twee_groter(a: int,b: int) -> str:
+  return a < b
