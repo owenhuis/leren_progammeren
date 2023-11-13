@@ -129,22 +129,24 @@ report()
 
 #functie 3
 
-try:
-  def calc_discount(price: float, brand: str, month_discount_brands: str) -> float:
-    # return calculated discount based on price and brand
-      if month_discount_brands in month_discount_brands:
-        return round(korting_berekenen, 2)
-  month_discount_brands = 'vespa','kymco','yamama'
-  brand = input('kies uit : vespa, kymco, yamama, Aprilia, NIU  ').lower()
-  MONTH_DISCOUNT_PERC = 10
-  price = 599.99
-  korting_berekenen = round(price * MONTH_DISCOUNT_PERC / 100, 2)
+month_discount_brands = ['vespa','kymco','yamama']
+brand = input('kies uit : vespa, kymco, yamama, Aprilia, NIU:  ')
+MONTH_DISCOUNT_PERC = 10
+def calc_discount(price: float, brand: str, month_discount_brands: str) -> float:
+  # return calculated discount based on price and brand
+    if brand in month_discount_brands:
+      return float(round(price * MONTH_DISCOUNT_PERC / 100, 2))
+    else:
+       return price
+
+price = 599.99
+korting_berekenen = round(price * MONTH_DISCOUNT_PERC / 100, 2)
 
 
-  korting = calc_discount
-  expect_content = korting_berekenen
-  name = f'korting op scooter: €{round(korting_berekenen, 2)} als het korting heeft'
-  test(name, korting, expect_content)
-except ValueError:
-  print('er is een fout opgetreden probbeer aljseblieft opnieuw')
+result = calc_discount(price, brand, month_discount_brands)
+expect_content = korting_berekenen
+
+name = f'korting op scooter: €{round(korting_berekenen, 2)} als het korting heeft'
+test(name,expect_content, result)
+
 report()
