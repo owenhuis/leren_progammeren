@@ -13,24 +13,21 @@ calculated = decrement(nr2)
 test('decrement', expected, calculated)
 
 expected = nr1 + nr2
-calculated = (nr1 + nr2)
+calculated = add(nr1, nr2)
 test('add', expected, calculated)
  
 expected = nr2 - nr1
-calculated = (nr2 - nr1)
+calculated = substract(nr2, nr1)
 test('substract', expected, calculated)
 
 expected = nr1 * nr2
-calculated = (nr1 * nr2)
+calculated = multiply(nr1, nr2)
 test('multiply', expected, calculated)
-try:
-    expected = nr1 / nr2
-    calculated = (nr1 / nr2)
-    test('divide', expected, calculated)
-except:
-    expected = None
-    calculated = divide(nr1, 0)
-    test('divide by zero', expected, calculated)
+
+expected = nr1 / nr2
+calculated = divide(nr1, nr2)
+test('divide', expected, calculated)
+
 
 report()
 

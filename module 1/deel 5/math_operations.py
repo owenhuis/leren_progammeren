@@ -15,10 +15,11 @@ def substract(nr1: float,nr2:float) -> float:
 
 def multiply(nr1: float,nr2: float) -> float:
   return nr1 * nr2
-
 def divide(nr1: float,nr2:float) -> float:
-  return nr1 / nr2
-
+  try:
+    return nr1 / nr2
+  except ZeroDivisionError:
+    return None
 def even(nr1: int, nr2: int) -> str:
   return nr1 == nr2
 
