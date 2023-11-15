@@ -1,4 +1,3 @@
-# example:
 import math 
 
 def increment(nr: float) -> float:
@@ -15,11 +14,13 @@ def substract(nr1: float,nr2:float) -> float:
 
 def multiply(nr1: float,nr2: float) -> float:
   return nr1 * nr2
-def divide(nr1: float,nr2:float) -> float:
-  try:
-    return nr1 / nr2
-  except ZeroDivisionError:
+
+def divide(nr1: float,nr2: float) -> float:
+  if nr2 == 0:
     return None
+  else:
+    return nr1 / nr2
+
 def even(nr1: int, nr2: int) -> str:
   return nr1 == nr2
 

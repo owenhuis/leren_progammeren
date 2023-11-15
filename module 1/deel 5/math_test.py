@@ -30,5 +30,3 @@ test('divide', expected, calculated)
 
 
 report()
-
-

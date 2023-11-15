@@ -1,0 +1,1 @@
+tekst = "fortnite is een erg grote game. die vooral populiar is onder de negen jarige kleine irritante kut kindjes die alleen zweten"
