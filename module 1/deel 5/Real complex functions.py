@@ -33,3 +33,4 @@ def counting(sentences: list) -> int:
     return ego_score
 markering = marking(text)
 result = counting(markering)
+print(result)
