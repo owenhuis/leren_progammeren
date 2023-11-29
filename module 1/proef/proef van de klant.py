@@ -19,11 +19,11 @@ if geswat == 'geef op':
             print('ondanks je geniale plan ben je geraakt in de cross-fire en bent doodgegegaan op 30 jarige leeftijd')
         elif wapen == 'mes':
             print('jij wordt op een niet fatale plek geraakt je pakt het mes dat in je zit en steekt het in zijn nek en je wint maar je krijgt + 5 jaar ')
-            extra_tijd = input('wat doe je (wacht/break-out)')
+            extra_tijd = input('wat doe je (wacht/break-out)').lower
             if extra_tijd == 'wacht':
                 print('je bent 75 wanneer je de gevangenis uit komt heel je familie is doodt door een rival clan je kan er niet tegen en je doodt jezelf')
             elif extra_tijd == 'break-out':
-                break_out = input('hoe ontsnap je (sneaky/ rally)')
+                break_out = input('hoe ontsnap je (sneaky/ rally)').lower()
                 if break_out == 'rally':
                     print('ondanks je geniale plan ben je geraakt in de cross-fire en bent doodgegegaan op 30 jarige leeftijd')
                 elif break_out == 'sneaky':
@@ -35,17 +35,26 @@ if geswat == 'geef op':
 #rechterzijde
 elif geswat == 'wapen kamer':
     print('jij rent naar je wapenkamer toe jij kan niet naar buiten en zij niet naar binnen wat doe je') 
-    vault = input('een val / yolo rush / wacht').lower()
+    vault = input('een val / yolo rush / wacht  ').lower()
     if vault == 'wacht':
         wacht = print('jij wacht en wacht dan krijg je honger en realiseer dat je geen eten hebt en na een paar dagen ga je dood')
     elif vault == 'val':
-        print('je hebt twee knoppen self destruct en fake self destruct maar ze zijn niet gelabeld je klikt op de verkeerde en gaat dood')
+        code = int(input('je hebt twee knoppen self destruct en fake self destruct maar ze zijn niet gelabeld je moet eerst een code invoeren je weet ze allemaal behalve een, je twijfelt tussen 1 of 3 wat kies je'))
+        if code > 2 or code < 2:
+           print('de code was fout je bent dood!')
+        else:
+            print('het was correct maar je hoort een countdown de fbi rent weg maar het is te laat iedereen is doodt')
     elif vault == 'yolo rush':
         print('je rent naar buiten en gooit enge edit course en 200 pumped ze allemaal')
-        fbi = input('je hebt ze allemaal gedoood wat doe je nu? (lay low/ wordt populair)')
+        fbi = input('je hebt ze allemaal gedoood wat doe je nu? (lay low/ wordt populair)').lower()
         if fbi == 'lay low':
             print('het leek je handig om laag te blijven aangezien je nu heel erg gezocht wordt door verschillende gevaarlijke mensen')
             print('het leven werd je te saai dus je dode je zelf')
         elif fbi == 'wordt populair':
             print("je koos om populiar te worden met je actie's")
             print('je buisnnees groede 10000x zo groot en je werdt de grootste drugs lord aller tijden')
+            print()
+            print()
+            print('je hebt gewonnen gefeliciteerd')
+
+print('dit is het einde')
