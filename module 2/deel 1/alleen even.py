@@ -1,2 +1,2 @@
-for even in range(20, 51, 2):
+for even in range(21, 51, 2):
     print(even, end =" ")
