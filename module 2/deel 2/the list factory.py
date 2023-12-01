@@ -1,4 +1,4 @@
-the_list = [] #moet een 3 lijsten met lijst 1 3 getallen (1,2,3) lijst 2 (2,4,6,8) lijst 3 (3,6,9,12,15,18)
+the_list = [] 
 
 hoeveel_lijstjes = input('hoeveel lijstjes wil je?')
 
