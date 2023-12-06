@@ -9,4 +9,12 @@ for i in range(hoeveel):
         keuze = random.choice(kleuren)
         zak.append(keuze)
 
+aantal_van_oranje = zak.count('oranje')
+aantal_van_blauw = zak.count('blauw')
+aantal_van_groen = zak.count('groen')
+aantal_van_bruin = zak.count('bruin')
 print(zak)
+print('aantal bruine: ',aantal_van_bruin)
+print('aantal blauwe: ', aantal_van_blauw)
+print('aantal groene: ', aantal_van_groen)
+print('aantal oranje: ', aantal_van_oranje)
