@@ -1,7 +1,7 @@
 WEEKDAGEN = 'maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag','zondag'
 
-for dag_in_de_week in WEEKDAGEN:
-    print(dag_in_de_week, end=' ')
+
+print(','.join(WEEKDAGEN))
 print()
 for werkdagen in WEEKDAGEN[:5]:
     print(werkdagen, end=' ')

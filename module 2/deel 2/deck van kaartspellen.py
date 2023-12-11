@@ -12,5 +12,6 @@ hand = random.shuffle(volle_deck)
 for hand in range(7):
     handje = volle_deck.pop(0)
     print(f'kaart {hand+1}: {handje}')
+
 print()
 print('deck (47 kaarten): ', volle_deck)

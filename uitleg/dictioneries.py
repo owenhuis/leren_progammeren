@@ -1,19 +1,18 @@
 #dictioneries
-mijn_tuple = ()
-mijn_lijst = [17, 28, 15, 33]
+# mijn_tuple = ()
+# mijn_lijst = [17, 28, 15, 33]
 
-#print(mijn_lijst[1])
+# print(mijn_lijst[1])
 
-personen_lijst = []
-#for _ in range(2):
- #   persoon = {}
-  #  persoon['voornaam'] = input('wat is je voornaam  ')
-   # persoon['achternaam'] = input('wat is je achternaam  ')
-    #persoon['leeftijd'] = int(input('wat is je leeftijd  '))
-    #personen_lijst.append(persoon)
+# personen_lijst = []
+# for _ in range(2):
+#     persoon = {}
+#     persoon['voornaam'] = input('wat is je voornaam  ')
+#     persoon['achternaam'] = input('wat is je achternaam  ')
+#     persoon['leeftijd'] = int(input('wat is je leeftijd  '))
+#     personen_lijst.append(persoon)
 
-
-#print(personen_lijst)
+# print(personen_lijst)
 
 auto_lijst = []
 for _ in range(2):
