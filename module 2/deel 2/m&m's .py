@@ -16,6 +16,7 @@ aantal_van_bruin = zak.count('bruin')
 aantal_van_geel = zak.count('geel')
 
 print(zak)
+print()
 print('aantal bruine: ', aantal_van_bruin)
 print('aantal blauwe: ', aantal_van_blauw)
 print('aantal groene: ', aantal_van_groen)
