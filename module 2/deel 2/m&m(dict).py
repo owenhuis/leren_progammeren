@@ -1,10 +1,16 @@
 import random
-zak = {}
+
 kleuren = ('rood', 'blauw', 'groen', 'bruin','geel')
+zak = {
+
+}
 
 hoeveel = int(input("hoeveeel m&m's wil in je zak je? "))
-volle_zak = 0
-for _ in range(hoeveel):
-    if volle_zak < hoeveel:
-        zak ['keuze'] = keuze = random.choice(kleuren)
-    print(zak)
+
+for mms in range(hoeveel):
+    keuze = random.choice(kleuren)
+    if not keuze in zak:
+        zak[keuze] = 0
+    zak[keuze] += 1
+    
+print(zak)
