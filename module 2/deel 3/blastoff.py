@@ -1,5 +1,5 @@
 import time
-getal = 30
+getal = 30 
 while getal > 0:
     print(getal)
     getal -= 1
