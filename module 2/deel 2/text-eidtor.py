@@ -9,12 +9,15 @@ vertaal_woorden = {
 
 zin = 'de piraat zei hoi tegen zijn vogel terwijl de vis blub en doei zei daar schrok de olifant van'
 gespleete_zin = zin.split()
+print(gespleete_zin)
 
+getelde_zin = len(gespleete_zin)
+for index in range(getelde_zin):
+    print(gespleete_zin[index])
+    if gespleete_zin[index] in vertaal_woorden:
+        gespleete_zin[index] = vertaal_woorden[gespleete_zin[index]]
 
-
-
-vertaalde_zin = ' '.join(vertaal_woorden.get(woord, woord)for woord in gespleete_zin)
-
+vertaalde_zin = ' '.join(gespleete_zin)
 
 print('de eerste zin:')
 sleep(1)
