@@ -6,4 +6,5 @@ while getal > 0:
     time.sleep(1)
     if getal == 0:
         print(0)
+        time.sleep(1)
         print('blastoff')
