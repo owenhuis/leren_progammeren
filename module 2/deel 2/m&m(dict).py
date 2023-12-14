@@ -1,4 +1,5 @@
 import random
+koningsdag = 'oranje'
 
 kleuren = ('rood', 'blauw', 'groen', 'bruin','geel')
 zak = {
@@ -12,5 +13,9 @@ for mms in range(hoeveel):
     if not keuze in zak:
         zak[keuze] = 0
     zak[keuze] += 1
-    
+    if not koningsdag in zak:
+        zak[koningsdag] = 0
+    zak[koningsdag] += 1
+
+
 print(zak)
