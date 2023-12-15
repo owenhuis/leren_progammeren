@@ -5,5 +5,5 @@ while hoeveelheid < 1000:
     print(hoeveelheid)
     toevoegen += 1
     if hoeveelheid >= 1000:
+        print('nu heb je meer dan of duizend getallen')
         break
-print('nu heb je meer dan of duizend getallen')
