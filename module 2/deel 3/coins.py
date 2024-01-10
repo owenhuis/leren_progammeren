@@ -18,6 +18,7 @@ if change > 0: # start if
       print('return maximal ', nrCoins, ' coins of ', coinValue, ' cents!' ) # je print de hoeveelheid dat terug moet worden gegeven en de coin grootte
       nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? ')) # input hoeveel munten je terug geeeft
       change -= nrCoinsReturned * coinValue #berekening om de change hoeveelhijd om laag te halen en om daarna als er nog change over is dat er dan opnieuw de loop wordt gedaan
+      changed = coinValue / 100
     
 
 # comment on code below: als de coinvalue een bepaalde grote heeft wordt het een kleinere grote
@@ -43,4 +44,4 @@ if change > 0: # start if
 if change > 0: # als de change groter is dan 0 dan wordt er aan gegeven dan print er welke change je mist anders print er done
   print('Change not returned: ', change / 100,' cents')
 elif change <= 0:
-  print('done')
+  print(f'done you have returned €{changed}')
