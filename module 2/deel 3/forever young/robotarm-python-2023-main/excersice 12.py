@@ -19,7 +19,7 @@ for start in range(9):
         robotArm.drop()
         if start == 8:
             break
-        for i in range(door): 
+        for i in range(door):
                 robotArm.moveLeft()
     elif color != 'red':
         robotArm.drop()
