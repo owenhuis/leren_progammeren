@@ -1,13 +1,16 @@
 START_GETAL = 50
-hoeveelheid = 50
-toevoegen = 51
+STOP = 1000
+hoeveelheid = START_GETAL
+stap = 0
 
-print(hoeveelheid)
-while hoeveelheid < 1000:
-    print(f'{START_GETAL} + [] = {hoeveelheid}')
-    hoeveelheid = hoeveelheid + toevoegen
-    toevoegen += 1
-    if hoeveelheid >= 1000:
-        print('nu heb je meer dan of duizend getallen')
-        break
+aan_str_toevoegen = f'{START_GETAL}'
+
+while hoeveelheid <= STOP:    
+    stap += 1
+    stapsgroote = stap + START_GETAL
+    hoeveelheid += stapsgroote
+    aan_str_toevoegen += f' + {stapsgroote}'
+
+    print(f'{stap}) {aan_str_toevoegen} = {hoeveelheid} ')
+
 

@@ -6,13 +6,8 @@ rood = 9
 door = 9
 # Jouw python instructies zet je vanaf hier:
 for start in range(9):
-    print(start)
-  
-    print(rood)
-
     robotArm.grab()
     color = robotArm.scan()
-    print(color)
     if color == 'red':
         for i in range(rood):
             robotArm.moveRight()

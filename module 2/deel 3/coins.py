@@ -3,13 +3,11 @@
 # purpose of program: 
 # function of program:
 # structure of program: 
-try:
-  toPay = int(float(input('Amount to pay: '))* 100) #input betalen
-  paid = int(float(input('Paid amount: ')) * 100) #input gegeven
-  change = paid - toPay #change berekenen
-  returned = paid - toPay
-except ValueError:
-  print('geef een geldig getal')
+
+toPay = int(float(input('Amount to pay: '))* 100) #input betalen
+paid = int(float(input('Paid amount: ')) * 100) #input gegeven
+change = paid - toPay #change berekenen
+
 if change > 0: # start if
   coinValue = 500 #de hoogste value coin voor in een latere berekening
   
@@ -23,7 +21,7 @@ if change > 0: # start if
       print(f'returned: {changed}')
       change -= nrCoinsReturned * coinValue #berekening om de change hoeveelhijd om laag te halen en om daarna als er nog change over is dat er dan opnieuw de loop wordt gedaan
       print(f'remaining to return: {change}')
-
+  
 # comment on code below: als de coinvalue een bepaalde grote heeft wordt het een kleinere grote
     if coinValue == 500:
       coinValue = 200
@@ -43,6 +41,8 @@ if change > 0: # start if
       coinValue = 1
     else:
       coinValue = 0
+
+returned = paid - toPay# teruggegeven change berekenen
 
 if change > 0: # als de change groter is dan 0 dan wordt er aan gegeven dan print er welke change je mist anders print er done
   print('Change not returned: ', change / 100,' cents')
