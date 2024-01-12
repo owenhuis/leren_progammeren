@@ -1,9 +1,9 @@
 count = 0
-answer = input('?').lower()
+answer = ''
 while answer != 'quit':
-    count += 1
     answer = input('?').lower()
     if answer == 'quit':
         break
+    count += 1
 
 print('aantal keer gefaald: ',count)

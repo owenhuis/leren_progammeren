@@ -7,7 +7,7 @@
 toPay = int(float(input('Amount to pay: '))* 100) #input betalen
 paid = int(float(input('Paid amount: ')) * 100) #input gegeven
 change = paid - toPay #change berekenen
-
+return_str = ''
 if change > 0: # start if
   coinValue = 500 #de hoogste value coin voor in een latere berekening
   
@@ -17,6 +17,7 @@ if change > 0: # start if
     if nrCoins > 0: #start voor een berekening en print met een ifp
       print('return maximal ', nrCoins, ' coins of ', coinValue, ' cents!' ) # je print de hoeveelheid dat terug moet worden gegeven en de coin grootte
       nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? ')) # input hoeveel munten je terug geeeft
+      return_str += f'{nrCoins} of {coinValue}, '
       changed = coinValue * nrCoinsReturned
       print(f'returned: {changed}')
       change -= nrCoinsReturned * coinValue #berekening om de change hoeveelhijd om laag te halen en om daarna als er nog change over is dat er dan opnieuw de loop wordt gedaan
@@ -46,7 +47,10 @@ returned = paid - toPay# teruggegeven change berekenen
 
 if change > 0: # als de change groter is dan 0 dan wordt er aan gegeven dan print er welke change je mist anders print er done
   print('Change not returned: ', change / 100,' cents')
+  print(return_str)
 elif change == 0:
   print(f'done you have returned €{returned / 100}')
+  print(return_str)
 else:
   print(f'te weinig betaald vraag voor: €{returned / 100}')
+

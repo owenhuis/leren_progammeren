@@ -11,10 +11,9 @@ for start in range(5):
         robotArm.moveRight()
     robotArm.drop()
     rechts -= 1
-    if start == 4:
-        break
-    for left in range(rechts):
-        robotArm.moveLeft()
+    if start < 4:
+        for left in range(rechts):
+            robotArm.moveLeft()
     rechts -= 1
 # Na jouw code wachten tot het sluiten van de window:
 robotArm.wait()

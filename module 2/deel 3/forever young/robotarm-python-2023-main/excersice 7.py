@@ -9,9 +9,7 @@ for blub in range(5):
         robotArm.grab()
         robotArm.moveLeft()
         robotArm.drop()
-    if blub == 4:
-        break
-    else:
+    if blub < 4:
         robotArm.moveRight()
         robotArm.moveRight()
 

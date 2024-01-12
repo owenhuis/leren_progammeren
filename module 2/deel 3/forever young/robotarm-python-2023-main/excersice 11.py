@@ -17,9 +17,7 @@ for start in range(9):
         robotArm.moveLeft()
     elif color != 'white':
         robotArm.drop()
-    if start == 8:
-        break
-    else:
+    if start < 8:
         robotArm.moveLeft()
 
 # Na jouw code wachten tot het sluiten van de window:

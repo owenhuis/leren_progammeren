@@ -1,6 +1,6 @@
-tijd = 24
+TIJD = 24
 uur = 0
-while uur != tijd:
+while uur != TIJD:
     uur += 1
     if uur < 12:
         print(uur,'AM')

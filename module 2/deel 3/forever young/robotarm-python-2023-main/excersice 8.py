@@ -9,9 +9,7 @@ for blub in range(7):
     for i in range(8):
         robotArm.moveRight()
     robotArm.drop()
-    if blub == 6:
-        break
-    else:
+    if blub < 6:
         for i in range(8):
             robotArm.moveLeft()
 
