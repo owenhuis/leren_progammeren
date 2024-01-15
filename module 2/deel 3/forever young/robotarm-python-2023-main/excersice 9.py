@@ -14,7 +14,7 @@ robotArm = RobotArm('exercise 9')
 #         for i in range(4):
 #             robotArm.moveLeft()
 for start in range(1,5):
-    print(f'start{start}')
+    print(f'start: {start}')
     for x in range(start, 0 ,-1):
         print(f'x {x}')
         robotArm.grab()
@@ -26,6 +26,5 @@ for start in range(1,5):
         for links in range(4):
             robotArm.moveLeft()
 
-    
 # Na jouw code wachten tot het sluiten van de window:
 robotArm.wait()

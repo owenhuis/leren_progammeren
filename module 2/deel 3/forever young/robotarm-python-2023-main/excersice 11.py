@@ -4,18 +4,17 @@ robotArm = RobotArm('exercise 11')
 
 
 # Jouw python instructies zet je vanaf hier:
-
+for i in range(8):
+    robotArm.moveRight()
 for start in range(9):
-    if start == 0:
-        for i in range(8):
-            robotArm.moveRight()
+    print(start)      
     robotArm.grab()
     color = robotArm.scan()
     if color == 'white':
         robotArm.moveRight()
         robotArm.drop()
         robotArm.moveLeft()
-    elif color != 'white':
+    else:
         robotArm.drop()
     if start < 8:
         robotArm.moveLeft()
