@@ -8,6 +8,7 @@ VIP_LIST = ('jeroen', 'jouke', 'rudi')
 
 stempel = False
 band = False
+bandje = False
 sap = False
 
 def leeftijd(age):
@@ -64,9 +65,9 @@ else:
         elif drinken != 'cola' and drinken != 'bier' and drinken != 'champagne':
             print('ik weet niet wat je bedoelt hier heb je water')
             sap = True
-        elif age < 21 and bandje == False and age < 21 and stempel == False:
+        elif age < 21 and bandje == False and age < 21 and stempel == False or bandje == "rood" and drinken == "champagne":
             print(f'je mag geen alchol onder de 21 probeer opnieuw in: {21 - age} jaar')
-        if sap == False:
+        elif sap == False:
             prijs = drink_prijs(drinken, band, stempel, bandje)
             print(prijs)
             sap = True 
