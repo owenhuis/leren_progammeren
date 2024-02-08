@@ -1,5 +1,5 @@
 #lijst \/
-boodschappen_lijst = []
+boodschappen_lijst = {}
 #je antwoord want anders kan de code kapot gaan
 antwoord = False
 #functie voor het toevoegen van items \/
@@ -14,6 +14,7 @@ def toevoegen (toevoeging, hoeveel_er_in):
             break
     if winkelkar == False:
         boodschappen_lijst.append(f'{hoeveel_er_in}x {toevoeging}')
+
 # eerste toevoeging \/
 toevoeging = input('wat wil je toevoegen? ').lower()
 hoeveel_er_in = int(input('hoevaak wil je het toevoegen'))

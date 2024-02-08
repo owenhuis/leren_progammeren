@@ -48,15 +48,10 @@ else:
         if age >= 21:
             print('jij krijgt een stempel van mij')
             stempel = True
-        else:
-            None
-    
 
     #vierkant 2
     while sap != True:
         drinken = input(f'wat wil je drinken?  ')
-        if sap == True:
-            break
         if drinken == 'champagne' and band == False:
             print('alleen vips mogen drinken')
         elif drinken == 'cola' and band == True or drinken == 'bier' and band == True:
