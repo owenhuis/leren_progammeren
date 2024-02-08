@@ -25,7 +25,7 @@ def drink_prijs(drank, band, stempel, bandje):
         return f'hier is je champagne dat is dan €{PRIJS_CHAMPAGNE}0'
     elif drank == 'champagne' and bandje == 'rood':
         return 'alleen vips krijgen champange '
-    return 'blub'
+
     
 #bouw hieronder de floowchart na
 print('welkom bij coole club')
