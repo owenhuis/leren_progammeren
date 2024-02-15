@@ -11,13 +11,13 @@ sleep(1)
 begin = input('wil je beginnnen? (ja/nee) ')
 if begin == 'ja':
     for i in range(20):
-        getal = random.randint(1,100)
+        getal = random.randint(1,1000)
         poging = 0
         correct = False  
-        while correct == False or poging > 10:
-            antwoord = int(input(f'welk nummer gok je voor cijfer: {i +1}? '))
+        while correct == False or poging >= 10:
+            antwoord = int(input(f'welk nummer gok je voor cijfer: {i +1}? (poging: {poging}) '))
             sleep(.5)
-            if poging >= 10:
+            if poging > 10:
                 print('helaas deze ronde heb je verloren')
             if antwoord > getal:
                 print('je bent hoger')
@@ -36,8 +36,6 @@ if begin == 'ja':
                 print('je bent heel warm')
             elif antwoord - getal < 50 and antwoord != getal:
                 print('je bent warm')
-
-
 
 print('----game summary----')
 print(f'aantal goed: {rondes_gewonnen} van de 20')

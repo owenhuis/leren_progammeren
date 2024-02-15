@@ -23,4 +23,4 @@ for _ in range(2):
     auto_lijst.append(auto)
 
 for prijs in auto_lijst:
-    print(prijs['prijs'])
+    print(prijs['prijs'], prijs['model'])
