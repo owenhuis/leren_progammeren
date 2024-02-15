@@ -11,13 +11,13 @@ def item():
 item()
 antwoord = input('Wil je nog iets toevoegen? (ja/nee)').lower()
 #tweede of meerdere toevoegen
-while antwoord != 'nee': 
+while antwoord != 'nee':
     if antwoord == 'ja':
         item() 
         antwoord = input('Wil je nog iets toevoegen? (ja/nee)').lower()
     elif antwoord == 'nee':
         break
-
+# print(winkelkar)
 #eind print
 print(' ')
 print(' ')
