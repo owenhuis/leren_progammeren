@@ -11,12 +11,13 @@ band = False
 bandje = False
 sap = False
 
-def leeftijd(age):
+def leeftijd(age, bandje):
     if age < 18:
         return print(f'probeer opnieuw in: {18 - age} jaar')
+    elif age < 21 and bandje != 'blauw':
+        return print(f'je mag geen alchol onder de 21 probeer opnieuw in: {21 - age} jaar')
 
-
-def drink_prijs(drank, band, stempel, bandje):
+def drink_prijs(drank, stempel, bandje):
     if drank == 'cola':
         return f'hier is je cola dat is dan €{PRIJS_COLA}0'
     if drank == 'bier' and stempel:
@@ -33,7 +34,7 @@ age = int(input('hoe oud ben je?  '))
 #vierkant 1
 if age < 18:
     print('sorry je mag nog niet naar binnen')
-    leeftijd(age)
+    leeftijd(age, bandje)
 else:
     naam = input('wat is je naam? ')
     if naam in VIP_LIST:
@@ -61,7 +62,7 @@ else:
             print('ik weet niet wat je bedoelt hier heb je water')
             sap = True
         elif age < 21 and bandje == False and age < 21 and stempel == False or bandje == "rood" and drinken == "champagne":
-            print(f'je mag geen alchol onder de 21 probeer opnieuw in: {21 - age} jaar')
+            leeftijd(age, bandje)
         elif sap == False:
             prijs = drink_prijs(drinken, band, stempel, bandje)
             print(prijs)
