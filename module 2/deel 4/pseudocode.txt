@@ -1,0 +1,53 @@
+zorgt voor een tijdelijke stop
+zorgt dat ik een random iets kan gebruiken
+telt de hoeveelheid rondes
+telt de aantal pogingen
+telt de aantal pogingen
+print uitleg \/
+
+
+
+
+
+
+print uitleg /\
+vraagt of je  wilt beginnen
+als je wilt beginnen \/
+    gaat het volgende 20x herhalen \/
+        maakt een random getal aan tussen 1 en duizend
+        je aantal pogingen worden toegevoegd bij je totale pogingen (anders kost het meer regels) 
+        zet je poging voor de ronde op 0
+        zet of je het antwoord in de ronde goed heb op false
+        als je wilt stoppen waar is dan \/
+            de for loop stopt
+        herhaalt het volgende tot je meer dan 10 pogingen maakt of wilt stoppen
+            probeer het volgende
+                gebruiker vult iets in (een getal) of (q om te stoppen)
+                wacht .5 sec
+            behalve als er een ValueError is (een letter) dan
+                stoppen wordt true
+                stopt de while
+            als je meer dan 10 pogingen doe dan
+                print iets uit
+                stop while
+            als je antwoord groter is dan het getal dan
+                print hoger
+                poging + 1
+            als je antwoord kleiner is dan het getal
+                print kleiner
+                poging + 1
+            als je antwoord gelijk is aan het getal 
+                je antwoordt wordt gezet op true
+                aantal rondes gewonnen + 1
+                wacht 0.5 sec
+                print gelukt
+                wacht 0.5 sec
+            warm berekennen
+            als warm een min getal is
+                andere manier warm berekenen
+            als antwoord binnen 20
+                print heel warm
+            als antwoord binnen 50
+                print warm
+            
+eind print\/
