@@ -21,6 +21,7 @@ if begin == 'ja': # als je wilt beginnen
         correct = False # zet of je hey antwoord in de ronde goed heb op false
         if stoppen == True:# als je wilt stoppen waar staat dan stop je
             break
+        print(getal)
         while correct == False or poging >= 10: # herhaalt het volgende tot je meer dan 10 pogingen maakt of wilt stoppen
             try:# probeer het volgende
                 antwoord = int(input(f'welk nummer gok je voor cijfer: {i +1}? (poging: {poging}) of zeg q om te stoppen')) # gebruiker vult iets in (een getal) of (q om te stoppen)
@@ -43,10 +44,12 @@ if begin == 'ja': # als je wilt beginnen
                 sleep(.5) # wacht 0.5 sec
                 print('je hebt hem') # print
                 sleep(.5)  # wacht 0.5 sec
+            
             berekenen = antwoord - getal # warm berekennen
             if berekenen < 0: # als warm - getal is
                 berekenen = getal - antwoord # andere manier warm berekenen
-            if berekenen < 20 and antwoord != getal: # binnen 20
+            
+            if berekenen < 20 and antwoord != getal:# binnen 20
                 print('je bent heel warm') # heel warm print
             elif berekenen < 50 and antwoord != getal: # binnen 50
                 print('je bent warm') # warm print
