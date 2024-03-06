@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 import random
 namen_lijst = []
 

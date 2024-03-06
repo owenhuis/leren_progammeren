@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 
 for naam in fruitmand:
     if naam['name'] == 'appel':

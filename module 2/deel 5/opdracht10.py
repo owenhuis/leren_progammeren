@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 
 
 grootste_fruit = sorted(fruitmand, key= lambda fruit: fruit['weight'], reverse=True)

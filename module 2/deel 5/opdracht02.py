@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 
 aantal_producten = len(fruitmand)
 

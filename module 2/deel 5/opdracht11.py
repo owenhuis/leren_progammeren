@@ -1,11 +1,15 @@
-from opdracht01 import *
+from fruitmand import *
 
 kleuren = []
 rond = 0
 niet_rond = 0
 
-for color in fruitmand:
-    kleuren.append(color['color'])
+for kleur in fruitmand:
+    if kleur['color'] in kleuren:
+        None
+    else:
+        kleuren.append(kleur['color'])
+
 
 kleur = input(f'welke kleur wil je kiezen? {kleuren} ')
 

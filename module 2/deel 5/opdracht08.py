@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 
 for _ in range(1):
     watermeloen = {}

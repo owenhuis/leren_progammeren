@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 
 kleur = {
     'yellow': 'gele',
@@ -6,10 +6,15 @@ kleur = {
     'orange': 'oranje',
     'red': 'rode',
     'brown': 'bruine',
+    'black': 'zwarte',
+    'pink': 'roze',
+    'purple': 'paarse'
 }
 
 
-for tekst in fruitmand:
-    naam_letters = len(tekst['name'])
-    naam_kleur = kleur.get(tekst['color'], tekst['color'])
-    print(f'de "{tekst["name"]}" ({naam_letters} letters) heeft een {naam_kleur} kleur en een gewicht van {tekst["weight"] / 1000} kg')
+tekst = max(fruitmand, key=lambda x: len(x["name"])) # voor langste naam
+
+naam_letters = len(tekst['name']) # voor aantal letters
+naam_kleur = kleur.get(tekst['color'], tekst['color']) # voor kleuren
+
+print(f'de "{tekst["name"]}" ({naam_letters} letters) heeft een {naam_kleur} kleur en een gewicht van {tekst["weight"] / 1000} kg')

@@ -1,4 +1,4 @@
-from opdracht01 import *
+from fruitmand import *
 
 omgekeerd = reversed(fruitmand)
 for naam in omgekeerd:
