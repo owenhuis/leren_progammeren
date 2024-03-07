@@ -20,9 +20,11 @@ for fruit in fruitmand:
         else:
             niet_rond += 1
 
+if rond == 0 and niet_rond == 0:
+    exit()
 if rond > niet_rond:
     print(f'er is {rond - niet_rond} meer ronde dan niet ronde')
 elif rond < niet_rond:
     print(f'er is {niet_rond - rond} meer niet ronde dan wel ronde')
-else:
+elif rond == niet_rond:
     print('er zijn evenveel ronde als niet ronde')

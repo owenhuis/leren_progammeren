@@ -11,10 +11,12 @@ kleur = {
     'purple': 'paarse'
 }
 
+def get_name (fruit):
+    return len(fruit['name'])
 
-tekst = max(fruitmand, key=lambda x: len(x["name"])) # voor langste naam
+langste_fruitnaam = max(fruitmand, key=get_name) # voor langste naam
 
-naam_letters = len(tekst['name']) # voor aantal letters
-naam_kleur = kleur.get(tekst['color'], tekst['color']) # voor kleuren
+naam_letters = get_name(langste_fruitnaam) # voor aantal letters
+naam_kleur = kleur.get(langste_fruitnaam['color'], langste_fruitnaam['color']) # voor kleuren
 
-print(f'de "{tekst["name"]}" ({naam_letters} letters) heeft een {naam_kleur} kleur en een gewicht van {tekst["weight"] / 1000} kg')
+print(f'de "{langste_fruitnaam["name"]}" ({naam_letters} letters) heeft een {naam_kleur} kleur en een gewicht van {langste_fruitnaam["weight"] / 1000} kg')

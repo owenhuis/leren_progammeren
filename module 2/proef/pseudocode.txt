@@ -1,0 +1,24 @@
+pseudo code \/
+
+lijst aanmaken
+
+
+zolang je namen wilt toevoegen
+    vraag naam voor in de lijst
+    naam staat nog niet in de lijst
+        voeg naam toe aan gewone lijst
+    naam staat in de lijst
+        loop opnieuw vanaf hier
+    drie namen in de lijst
+        wilt geen naam toevoegen
+            loop stopt
+        wilt naam toevoegen
+            loop gaat door
+
+maak een lijst kopie
+shuffle de lijst kopie
+
+zolang min 1 naam gelijk is aan zijn lootje
+    shuffle de lijst kopie
+
+print( naam van de trekker, de getrokke persoon)

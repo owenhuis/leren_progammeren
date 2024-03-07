@@ -1,11 +1,8 @@
 from fruitmand import *
 
-kleurtje = []
+kleuren = []
 
-for kleur in fruitmand:
-    if kleur['color'] in kleurtje:
-        None
-    else:
-        kleurtje.append(kleur['color'])
-
-print(kleurtje)
+for fruit in fruitmand:
+    if fruit['color'] not in kleuren:
+        kleuren.append(fruit['color'])
+print(kleuren)

@@ -1,5 +1,5 @@
 from fruitmand import *
 
-for naam in fruitmand:
-    if naam['name'] == 'appel':
-        print(naam['weight'])
+for fruit in fruitmand:
+    if fruit['name'] == 'appel':
+        print(fruit['weight'])
