@@ -1,5 +1,7 @@
 pseudo code \/
 
+random importeren voor de shuffle waarmee je combinaties van lijstjes maakt
+
 lijst aanmaken
 
 
@@ -7,13 +9,14 @@ zolang je namen wilt toevoegen
     vraag naam voor in de lijst
     naam staat nog niet in de lijst
         voeg naam toe aan gewone lijst
+        drie namen in de lijst
+            wilt geen naam toevoegen
+                loop stopt
+            wilt naam toevoegen
+                loop start opnieuw
     naam staat in de lijst
         loop opnieuw vanaf hier
-    drie namen in de lijst
-        wilt geen naam toevoegen
-            loop stopt
-        wilt naam toevoegen
-            loop gaat door
+   
 
 maak een lijst kopie
 shuffle de lijst kopie
