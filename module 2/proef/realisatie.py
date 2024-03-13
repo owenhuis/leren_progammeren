@@ -14,29 +14,30 @@ while namen_toevoegen:
         nog_een = input('wil je nog een naam toevoegen? (ja/nee)')
         if nog_een != 'ja':
             namen_toevoegen = False
-print(namen_lijst)
+print('namen lijst',namen_lijst)
 
 lootjes = namen_lijst.copy()
-print(lootjes)
+print('lootjes lijst',lootjes)
 
 random.shuffle(lootjes)
-print(lootjes)
-# for item1, item2 in zip(namen_lijst,lootjes):
-#     print(item1,item2)
-# while any(lootje == naam_lootje for  naam_lootje, lootje in zip(namen_lijst, lootjes)):
-#     print('test')
-#     random.shuffle(lootjes)
-#     print(lootjes)
+print('eerste shuffle',lootjes)
 
-for blub in namen_lijst, lootjes:
-        if blub == blub:
-            print('test23233')
+verloten = True
+counter = 0
+while verloten:
+    for blub in range(len(namen_lijst)):
+        if namen_lijst[blub] == lootjes[blub]:
+            print(f'{blub +1 } is gelijk')
             random.shuffle(lootjes)
-            print(blub)
-            #nu stoppen
+            print('shuffle ',lootjes)
+            counter = 0
         else:
-             print('blub')
-             #nu moet hij herhalen
+            print(f'klopt {blub +1} van de list')
+            counter += 1
+            if counter == len(namen_lijst):
+                verloten = False
+                break
+            #nu stoppen
 
 for getrokke_lootje in range(len(namen_lijst)):
     print(namen_lijst[getrokke_lootje], 'heeft', lootjes[getrokke_lootje])
