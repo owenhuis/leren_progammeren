@@ -1,5 +1,5 @@
-def get_hoi (blbu):
-    return print(f'hello from function town{blbu +1}\n')
+def get_hoi (aantal):
+    return print(f'hello from function town{aantal +1}\n')
 
 aantal_hallos = int(input('hoevaak wil je hoi'))
 
