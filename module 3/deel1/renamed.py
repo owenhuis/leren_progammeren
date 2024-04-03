@@ -1,8 +1,8 @@
-def get_even_oneven(meegegeven_int:int) -> bool: #return true als even return false als oneven
-    return meegegeven_int % 2 == 0
+def check_even(cijfer:int) -> bool: #return true als even return false als oneven
+    return cijfer % 2 == 0
 
-def get_omgekeerde_zin(meegegeven_string:str) -> str: # draait je zin om
-    gespleten_string = meegegeven_string.split()
+def get_omgekeerde_zin(zin:str) -> str: # draait je zin om
+    gespleten_string = zin.split()
     omgekeerde_woordenlijst = gespleten_string[::-1]
     gejoinde_string = ' '.join(omgekeerde_woordenlijst)
     return gejoinde_string
@@ -12,7 +12,7 @@ def get_aantal_unieke_letters_in_string(meegegeven_string:str) -> int: # geeft j
     aantalk_unieke_letters = len(unieke_letters_dict)
     return aantalk_unieke_letters
 
-def get_gemiddelde_lengte_zin(megegeven_str:str) -> float:
+def get_gemiddelde_lengte_woorden(megegeven_str:str) -> float:
     gespleten_string = megegeven_str.split()
     aantal_woorden = 0
 
