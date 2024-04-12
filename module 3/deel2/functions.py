@@ -26,15 +26,13 @@ def getPersonCashInGold(personCash:dict) -> float:
     for item in personCash:
         if item == 'copper':
             amount += copper2gold(personCash[item])
-            return amount
         if item == 'silver':
             amount += silver2gold(personCash[item])
-            return amount
+        if item == 'gold':
+            amount += personCash[item]
         if item == 'platinum':
             amount += platinum2gold(personCash[item])
-            return amount
     return amount
-
 
 ##################### O05 #####################
 
