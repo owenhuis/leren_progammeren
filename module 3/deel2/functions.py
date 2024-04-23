@@ -37,9 +37,10 @@ def getPersonCashInGold(personCash:dict) -> float:
 ##################### O05 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    people = copper2gold(people)
-    horses = copper2gold(horses)
-    return people + horses
+    koste = 0
+    koste += copper2gold(people)
+    koste += copper2gold(horses)
+    return koste
 
 ##################### O06 #####################
 
