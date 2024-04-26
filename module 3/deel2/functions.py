@@ -1,6 +1,7 @@
 import time
 from termcolor import colored
 from data import *
+import math
 
 ##################### O03 #####################
 
@@ -38,31 +39,50 @@ def getPersonCashInGold(personCash:dict) -> float:
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
     koste = 0
-    koste += copper2gold(people)
-    koste += copper2gold(horses)
-    return koste
+    koste += people * COST_FOOD_HUMAN_COPPER_PER_DAY * JOURNEY_IN_DAYS
+    koste += horses * COST_FOOD_HORSE_COPPER_PER_DAY * JOURNEY_IN_DAYS
+    koste = copper2gold(koste)
+    return round(koste,2)
 
 ##################### O06 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    items = []
+    for item in list:
+        if key in item and item[key] == value:
+            items.append(item)
+    return items
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    lijst = []
+    for people in people:
+        if people['adventuring'] == True:    
+            lijst.append(people)
+    return lijst
 
 def getShareWithFriends(friends:list) -> list:
-    pass
+    lijst = []
+    for vriend in friends:
+        if vriend['shareWith'] == True:
+            lijst.append(vriend)
+    return lijst
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    items = []
+    for item in friends:
+        if item['adventuring'] == True and item['shareWith'] == True:
+            items.append(item)
+    return items
 
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    totaal_mensen = math.ceil(people/ 2)
+    return totaal_mensen
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    totaal_mensen = math.ceil(people/3)
+    return totaal_mensen
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
     pass
