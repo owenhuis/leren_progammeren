@@ -77,7 +77,7 @@ def getTotalRentalCost(horses:int, tents:int) -> float:
     totale_kosten += paarden_kosten
     tenten_kosten = tents * COST_TENT_GOLD_PER_WEEK * round(JOURNEY_IN_DAYS / 7)
     totale_kosten += tenten_kosten
-    return totale_kosten
+    return round(totale_kosten,2)
 
 ##################### O08 #####################
 
@@ -125,11 +125,14 @@ def getInterestingInvestors(investors:list) -> list:
     lijst = []
     for interesting in investors:
         if interesting['profitReturn'] <= 10:
-            lijst.append(investors)
+            lijst.append(interesting)
     return lijst
 
 def getAdventuringInvestors(investors:list) -> list:
-    return getInterestingInvestors(getAdventuringPeople(investors))
+    interesante_investoren = getInterestingInvestors(investors)
+    avonturende_investoren = getAdventuringPeople(interesante_investoren)
+    
+    return avonturende_investoren
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
     total_price = 0.0
@@ -168,22 +171,52 @@ def getInvestorsCuts(profitGold:float, investors:list) -> list:
         investor_cut = round(profitGold * investor['profitReturn'] / 100,2)
         if investor['profitReturn'] <= 10:
             lijst.append(investor_cut)
-    return lijst
+    return lijst[:len(lijst)]
 
 def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> float:
-    total = 0.0
-    for cut in investorsCuts:
-        total += cut + fellowship
-        try:
-            total %= profitGold
-        except ZeroDivisionError:
-            total = 0.0
-    return total
-
+    total_investors = sum(investorsCuts)
+    remaining_profit = profitGold - total_investors
+    if fellowship == 0:
+        return []
+    adventurer_cut = max(remaining_profit / fellowship, 0.0)
+    return round(adventurer_cut, 2)
 ##################### O14 #####################
 
-def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+def getEarnigs(profitGold: float, mainCharacter: dict, friends: list, investors: list) -> list:
+    people = [mainCharacter] + friends + investors
+
+    earnings = []
+
+    # haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    intresting_investors = getInterestingInvestors(investors)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold, investors)
+    fellowship = [mainCharacter] + adventuringInvestors + adventuringFriends
+    goldCut = getAdventurerCut(profitGold, investorsCuts, len(fellowship))
+
+# verdeel de uitkomsten
+    for person in people:
+
+        startGold = getPersonCashInGold(person['cash'])
+        endGold = startGold
+
+
+        if person in adventuringFriends:
+            endGold += goldCut - 10
+        if person in adventuringInvestors:
+            endGold += goldCut
+        if person  in intresting_investors:
+            endGold += round(person['profitReturn'] * profitGold / 100, 2)
+        if person == mainCharacter:
+            endGold += goldCut + 10 * len(adventuringFriends)
+
+        earnings.append({
+            'name': person['name'],
+            'start': round(startGold, 2),
+            'end': round(endGold, 2),
+        })
+    return earnings
 
 ##################### view functions #####################
 
