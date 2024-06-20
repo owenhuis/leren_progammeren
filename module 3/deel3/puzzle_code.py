@@ -1,3 +1,5 @@
+# see speek sequence
+
 import time
 nummer = [1]
 nieuw_getal = []
@@ -10,13 +12,13 @@ while drieopeenrij == False:
 
 
     for getal in nummer:
-        if round_one == False and (getal == 1 and (laatste_getal is None or laatste_getal == 1)):
+        if round_one == False and (getal == 1 or (laatste_getal is None or laatste_getal == 1)):
             getalhoeveelheid.append(1)
             laatste_getal = 1
-        elif getal == 2 and (laatste_getal is None or laatste_getal == 2):
+        elif getal == 2 or (laatste_getal is None or laatste_getal == 2):
             getalhoeveelheid.append(2)
             laatste_getal = 2
-        elif getal == 3 and (laatste_getal is None or laatste_getal == 3):
+        elif getal == 3 or (laatste_getal is None or laatste_getal == 3):
             getalhoeveelheid.append(3)
             laatste_getal = 3
             if len(getalhoeveelheid) == 3:
