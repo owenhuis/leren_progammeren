@@ -1,17 +1,16 @@
-
+import time
 nummer = [1]
-
+nieuw_getal = []
+getalhoeveelheid = []
 drieopeenrij = False
 round_one = True
-print(nummer)
 while drieopeenrij == False:
-    print(nummer)
     nieuw_getal = []
-    getalhoeveelheid = []
     laatste_getal = None
 
+
     for getal in nummer:
-        if getal == 1 and (laatste_getal is None or laatste_getal == 1) and round_one == False:
+        if round_one == False and (getal == 1 and (laatste_getal is None or laatste_getal == 1)):
             getalhoeveelheid.append(1)
             laatste_getal = 1
         elif getal == 2 and (laatste_getal is None or laatste_getal == 2):
@@ -25,27 +24,29 @@ while drieopeenrij == False:
                 break
         else:
             if laatste_getal == 1:
-                nieuw_getal.append(10 + len(getalhoeveelheid))
+                nieuw_getal.append(1 + len(getalhoeveelheid) * 10)
             elif laatste_getal == 2:
-                nieuw_getal.append(20 + len(getalhoeveelheid))
+                nieuw_getal.append(2 + len(getalhoeveelheid) * 10)
             elif laatste_getal == 3:
-                nieuw_getal.append(30 + len(getalhoeveelheid))
+                nieuw_getal.append(3 + len(getalhoeveelheid)* 10)
             getalhoeveelheid.clear()
             getalhoeveelheid.append(getal)
             laatste_getal = getal
 
-    if round_one:
-        nieuw_getal.append(11)
-        round_one = False
-    else:
-        if laatste_getal == 1:
-            nieuw_getal.append(10 + len(getalhoeveelheid))
-        elif laatste_getal == 2:
-            nieuw_getal.append(20 + len(getalhoeveelheid))
-        elif laatste_getal == 3:
-            nieuw_getal.append(30 + len(getalhoeveelheid))
-
+        if round_one == True:
+            nieuw_getal.append(11)
+            round_one = False
+        else:
+            if laatste_getal == 1:
+                nieuw_getal.append(1 + len(getalhoeveelheid) * 10)
+            elif laatste_getal == 2:
+                nieuw_getal.append(2 + len(getalhoeveelheid) * 10)
+            elif laatste_getal == 3:
+                nieuw_getal.append(3 + len(getalhoeveelheid) * 10)
     nummer = nieuw_getal
+    print(nummer)
+    time.sleep(.5)
+    
 
 
 print('final number:', nummer)
