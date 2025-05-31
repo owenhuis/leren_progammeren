@@ -1,54 +1,25 @@
-# see speek sequence
+reeks = [1]
+drie_op_een_rij = False
 
-import time
-nummer = [1]
-nieuw_getal = []
-getalhoeveelheid = []
-drieopeenrij = False
-round_one = True
-while drieopeenrij == False:
-    nieuw_getal = []
-    laatste_getal = None
+start = 1 
 
-
-    for getal in nummer:
-        if round_one == False and (getal == 1 or (laatste_getal is None or laatste_getal == 1)):
-            getalhoeveelheid.append(1)
-            laatste_getal = 1
-        elif getal == 2 or (laatste_getal is None or laatste_getal == 2):
-            getalhoeveelheid.append(2)
-            laatste_getal = 2
-        elif getal == 3 or (laatste_getal is None or laatste_getal == 3):
-            getalhoeveelheid.append(3)
-            laatste_getal = 3
-            if len(getalhoeveelheid) == 3:
-                drieopeenrij = True
-                break
+while drie_op_een_rij == False:
+    nieuwe_reeks = []
+    count = 1 
+    for i in range(1, len(reeks)):
+        if reeks[i] == reeks[i - 1]:
+            count += 1
         else:
-            if laatste_getal == 1:
-                nieuw_getal.append(1 + len(getalhoeveelheid) * 10)
-            elif laatste_getal == 2:
-                nieuw_getal.append(2 + len(getalhoeveelheid) * 10)
-            elif laatste_getal == 3:
-                nieuw_getal.append(3 + len(getalhoeveelheid)* 10)
-            getalhoeveelheid.clear()
-            getalhoeveelheid.append(getal)
-            laatste_getal = getal
+            nieuwe_reeks.append(count)
+            nieuwe_reeks.append(reeks[i - 1])
+            count = 1
+    nieuwe_reeks.append(count) 
+    nieuwe_reeks.append(reeks[-1]) 
+    reeks = nieuwe_reeks
+    for y in reeks:
+        print(y, end='')
+    print()
 
-        if round_one == True:
-            nieuw_getal.append(11)
-            round_one = False
-        else:
-            if laatste_getal == 1:
-                nieuw_getal.append(1 + len(getalhoeveelheid) * 10)
-            elif laatste_getal == 2:
-                nieuw_getal.append(2 + len(getalhoeveelheid) * 10)
-            elif laatste_getal == 3:
-                nieuw_getal.append(3 + len(getalhoeveelheid) * 10)
-    nummer = nieuw_getal
-    print(nummer)
-    time.sleep(.5)
-    
-
-
-print('final number:', nummer)
+    for laatste_check in range(len(reeks)):
+        if reeks[laatste_check] == 3 and reeks[laatste_check + 1] == 3:
+            drie_op_een_rij = True
